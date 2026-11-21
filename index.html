@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Puja Reddy | Portfolio</title>
+<meta name="description" content="Puja, final-year B.Tech (Computer Science and Business Systems). Projects in data, web and NLP.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:dark;
+  --bg:#0B1230; --surface:#141D47; --ink:#FFFFFF; --muted:#B8BFDF;
+  --line:#2B3668; --accent:#B9A8F5; --accent-ink:#0B1230; --mark:#6A57C9;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:"Nunito",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:1.05rem; line-height:1.6;
+}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--mark);outline-offset:3px}
+.wrap{max-width:960px;margin:0 auto;padding:0 1.25rem}
+
+/* top bar */
+header.bar{padding:1.1rem 0}
+header.bar .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.75rem}
+.logo{font-family:"Fraunces",Georgia,serif;font-weight:700;font-size:1.25rem;text-decoration:none;color:var(--ink)}
+nav a{margin-left:1.25rem;color:var(--muted);text-decoration:none;font-weight:500}
+nav a:hover{color:var(--accent)}
+
+/* hero: the one bold element */
+.hero{padding:3rem 0;display:flex;align-items:center;justify-content:space-between;gap:2.5rem;flex-wrap:wrap-reverse}
+.hero-text{flex:1 1 22rem}
+.photo{width:210px;height:210px;border-radius:50%;object-fit:cover;border:5px solid var(--surface);box-shadow:0 0 0 3px var(--accent);flex:none}
+.photo.fallback{display:none;place-items:center;background:var(--accent);color:var(--accent-ink);font-family:"Fraunces",Georgia,serif;font-size:5rem;font-weight:700}
+.hero h1{
+  font-family:"Fraunces",Georgia,serif;font-weight:700;
+  font-size:clamp(2.6rem,8vw,5rem);line-height:1.05;margin:0 0 1.25rem;letter-spacing:-.01em;
+}
+.hero h1 span{background:linear-gradient(transparent 62%,var(--mark) 62%);padding:0 .1em}
+.hero p{max-width:34rem;color:var(--muted);font-size:1.2rem;margin:0 0 1.75rem}
+.btns{display:flex;gap:.75rem;flex-wrap:wrap}
+.btn{
+  display:inline-block;padding:.7rem 1.3rem;border-radius:.6rem;font-weight:600;text-decoration:none;
+  border:2px solid var(--accent);
+}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}
+.btn.ghost{color:var(--accent)}
+.btn:hover{filter:brightness(1.08)}
+
+/* sections */
+section{padding:2.5rem 0;border-top:1px solid var(--line)}
+h2{font-family:"Fraunces",Georgia,serif;font-size:1.8rem;margin:0 0 1.5rem}
+
+/* projects */
+.projects{display:grid;gap:1.25rem}
+.project{
+  background:var(--surface);border:1px solid var(--line);border-radius:1.1rem;padding:1.5rem;border-left:6px solid var(--accent);
+  display:grid;gap:.5rem;
+}
+.project h3{margin:0;font-size:1.3rem;font-family:"Fraunces",Georgia,serif}
+.project p{margin:0;color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem;margin:.4rem 0 .2rem;padding:0;list-style:none}
+.tags li{border:1px solid var(--line);border-radius:999px;padding:.1rem .7rem;font-size:.9rem}
+.links a{margin-right:1.1rem;font-weight:600}
+
+/* certificates */
+.certs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem}
+.cert{background:var(--surface);border:1px solid var(--line);border-radius:1.1rem;padding:1.4rem;display:grid;gap:.4rem;align-content:start}
+.cert h3{margin:0;font-size:1.15rem;font-family:"Fraunces",Georgia,serif}
+.cert .by{margin:0;color:var(--muted);font-size:.95rem}
+.cert p{margin:0}
+.cert a{font-weight:600;margin-top:.4rem}
+.also{margin:1.5rem 0 0;color:var(--muted)}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.25rem 2rem;margin:0}
+.skills dt{font-weight:600}
+.skills dd{margin:.15rem 0 0;color:var(--muted)}
+
+/* about + contact */
+.about p{max-width:40rem;margin:0 0 1rem}
+.contact ul{list-style:none;margin:0;padding:0;display:grid;gap:.5rem}
+footer{padding:2rem 0 3rem;color:var(--muted);font-size:.95rem;border-top:1px solid var(--line)}
+
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="logo" href="#top">Puja Reddy</a>
+    <nav aria-label="Main">
+      <a href="#projects">Projects</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#skills">Skills</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap">
+
+    <div class="hero">
+      <div class="hero-text">
+      <h1>Hi, I’m <span>Puja</span>.</h1>
+      <p>Computer Science and Business Systems student who turns ideas into working projects, from carbon emission prediction to next-word text prediction. Open to developer roles where I can learn and contribute.</p>
+      <div class="btns">
+        <a class="btn primary" href="resume.pdf">View resume</a>
+        <a class="btn ghost" href="#projects">See my projects</a>
+      </div>
+      </div>
+      <img class="photo" src="photo.jpg" alt="Photo of Puja Reddy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+      <div class="photo fallback" aria-hidden="true">P</div>
+    </div>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects">
+
+        <article class="project">
+          <h3>Carbon Emission Analysis in Data Centers</h3>
+          <p>A web application that analyzes and predicts carbon emissions in data centers using CPU usage, power consumption and temperature. It combines data analysis and machine learning with an interactive dashboard to show emission patterns and different levels of environmental impact.</p>
+          <ul class="tags"><li>Python</li><li>Machine learning</li><li>React</li><li>Flask</li><li>MongoDB Atlas</li><li>Render</li></ul>
+        </article>
+
+        <article class="project">
+          <h3>Legal Document Summarizer</h3>
+          <p>Built at the Samsung Innovation Campus Hackathon 2025. It summarizes long court documents so law students can grasp important cases quickly, and hides personal details like phone numbers, addresses and Aadhaar numbers.</p>
+          <ul class="tags"><li>NLP</li><li>Python</li><li>Web app</li></ul>
+        </article>
+
+        <article class="project">
+          <h3>Smart Text Prediction using NLP</h3>
+          <p>A text prediction system that predicts the next word from what the user has typed. It uses Bigram and Trigram language models with tokenization, Laplace smoothing and backoff to handle different word sequences.</p>
+          <ul class="tags"><li>Python</li><li>NLP</li><li>N-gram models</li></ul>
+        </article>
+
+        <article class="project">
+          <h3>Hyper Reach</h3>
+          <p>A platform concept that connects local businesses, such as cafes, salons and small shops, with local influencers for promotional collaborations. It aims to improve small businesses’ online visibility through location-based matching and affordable influencer marketing.</p>
+          <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Figma</li><li>Netlify</li></ul>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="certificates">
+      <h2>Certificates</h2>
+      <div class="certs">
+        <article class="cert">
+          <h3>Software Engineering Job Simulation</h3>
+          <p class="by">JPMorgan Chase &amp; Co. on Forage, July 2026</p>
+          <p>Project setup, Kafka integration, H2 database and REST API integration and controller.</p>
+          <a href="certificates/jp-morgan-software-engineering.pdf">View certificate</a>
+        </article>
+        <article class="cert">
+          <h3>Data Analytics Job Simulation</h3>
+          <p class="by">Deloitte on Forage, July 2026</p>
+          <p>Data analysis and forensic technology tasks.</p>
+          <a href="certificates/deloitte-data-analytics.pdf">View certificate</a>
+        </article>
+        <article class="cert">
+          <h3>Alpha: DSA with Java</h3>
+          <p class="by">Apna College</p>
+          <p>Data structures and algorithms in Java.</p>
+          <a href="certificates/apna-college-dsa-java.pdf">View certificate</a>
+        </article>
+      </div>
+      <p class="also">Also completed: AWS Academy Cloud Foundations, NPTEL Soft Skills, NPTEL User Centric Computing for HCI.</p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <dl class="skills">
+        <div><dt>Programming</dt><dd>Python, Java, SQL</dd></div>
+        <div><dt>Databases</dt><dd>MySQL, MongoDB</dd></div>
+        <div><dt>Web</dt><dd>HTML, CSS, JavaScript, React, Flask, REST APIs</dd></div>
+        <div><dt>Data analytics</dt><dd>Pandas, NumPy, EDA, data cleaning</dd></div>
+        <div><dt>Reporting</dt><dd>Microsoft Excel, Power BI</dd></div>
+        <div><dt>AI and ML</dt><dd>Machine learning, NLP, classification</dd></div>
+        <div><dt>Core concepts</dt><dd>OOP, DSA, problem solving</dd></div>
+        <div><dt>Tools</dt><dd>VS Code, Git, GitHub</dd></div>
+      </dl>
+    </section>
+
+    <section id="about" class="about">
+      <h2>About</h2>
+      <p>I enjoy exploring technology, solving problems and turning ideas into something meaningful. Working on projects has helped me connect what I learn in theory with real applications.</p><p>I like understanding how things work, experimenting with new ideas and learning beyond what I already know. I’m always looking for chances to learn, contribute and grow as a developer.</p>
+      
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <ul>
+        <li>Email: <a href="mailto:poojareddy2207@gmail.com">poojareddy2207@gmail.com</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/puja-reddy-512721321">linkedin.com/in/puja-reddy-512721321</a></li>
+        <li>GitHub: <a href="https://github.com/poojareddy2207-sys">github.com/poojareddy2207-sys</a></li>
+        <li>Based in Navi Mumbai, Maharashtra</li>
+      </ul>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Puja Reddy</div>
+</footer>
+
+</body>
+</html>
